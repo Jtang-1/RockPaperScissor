@@ -6,11 +6,11 @@ function computerPlay(){
 function playRound(playerSelection, computerSelection){
     playerSelection = playerSelection.toLowerCase();
     computerSelection = computerSelection.toLowerCase();
-    return result(playerSelection, computerSelection);
+    return findResult(playerSelection, computerSelection);
 
 }
 
-function result(playerSelection, computerSelection){
+function findResult(playerSelection, computerSelection){
     if (playerSelection === computerSelection){
         return "Tie!";
     } 
@@ -48,7 +48,7 @@ function winMessage(playerSelection, computerSelection){
     return `You Win! ${playerSelection} beats ${computerSelection}`;
 }
 
-function game(){
+function playGame(){
     for (let i = 0; i<5; i++){
         valid = false;
         let playerSelection = prompt("Rock, Paper, or Scissor?");
@@ -83,4 +83,4 @@ function isValid(playerSelection){
 // console.log(playRound("paper","PapEr")); //tie
 // console.log(playRound("paper","scissor")); //lose
 
-game();
+playGame();
